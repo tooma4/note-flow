@@ -1,0 +1,17 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 750px;
+    align-items: center;
+    margin-block-start: 40px;
+}
+
+.headerTitle {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.headerChildren {
+    display: flex;
+    gap: 10px
+}
