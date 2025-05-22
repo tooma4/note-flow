@@ -1,0 +1,130 @@
+@use '../../../scss/variables' as *;
+
+.button {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: fit-content;
+    align-items: center;
+    border: none;
+    font-family: $font-family;
+    font-weight: 700;
+    cursor: url('../../../assets/images/cursor-hand2.png'), auto;
+
+    .dropdownMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: nowrap;
+    width: 100%;
+    top: 105%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #a29bfe;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+    .dropdownItem {
+      font-size: 14px;
+      color: #6c5ce7;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #f0f0ff;
+      }
+
+    }
+  }
+
+}
+
+.primary {
+    background-color: $accent-color;
+    color: $accent-color-3;
+    text-transform: uppercase;  
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: $button-font-size;
+
+    &:hover {
+        background-color: $accent-hover-color;
+    }
+    
+}
+
+.secondary {
+    background-color: transparent;
+    color: $accent-color;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 5px;
+    border: 1px solid $accent-color;
+    font-size: $button-font-size;
+
+    &:hover {
+        background-color: $accent-hover-color-2;
+    }
+}
+
+.link {
+    display: inline-flex;
+    padding: 0;
+    background: none;
+    background-color: transparent;
+    color: #CDCDCD;
+    border: none;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+
+    &.delete:hover {
+        color: red;
+    }
+
+    &.edit:hover {
+        color: rgb(0, 26, 255);
+    }
+}
+
+.theme {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+
+    .spanIcon {
+    width: 22px;
+    height: 22px;
+    }
+}
+
+.add {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 13px;
+    text-align: center;
+    box-shadow: 0px 0px 4px $accent-color; 
+}
+
+.text_and_icon {
+    display: inline-flex;
+    gap: 27px;
+    padding: 8px 10px;
+    width: fit-content; 
+
+    .spanIcon {
+    display: inline-flex;
+    padding-inline-end: 10px;
+    }
+
+    .spanText {
+    padding-inline-start: 10px;
+    }
+}
+
+
+

@@ -1,4 +1,9 @@
 .appContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.testButtonContainer {
+    display: flex;
+    flex-direction: column;
 }
