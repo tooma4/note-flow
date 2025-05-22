@@ -6,22 +6,18 @@
 import type {Config} from 'jest';
 
 const config: Config = {
-  collectCoverage: true,
-  coverageProvider: "v8",
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-
-  // A map from regular expressions to paths to transformers
-  transform: {
-        // '^.+\\.[tj]sx?$' для обработки файлов js/ts с помощью `ts-jest`
-        // '^.+\\.m?[tj]sx?$' для обработки файлов js/ts/mjs/mts с помощью `ts-jest`
-        '^.+\\.tsx?$': [
-          'ts-jest',
-          {
-            // настройки для ts-jest
-          },
-        ],
-      }
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.test.json'
+    },
+     
+  },
+  moduleNameMapper: {
+    // Добавить поддержку scss
+    '\\.(scss|sass|css)$': 'identity-obj-proxy',
+  },
 };
 
 export default config;
