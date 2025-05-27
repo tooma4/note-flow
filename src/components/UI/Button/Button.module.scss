@@ -9,36 +9,45 @@
     border: none;
     font-family: $font-family;
     font-weight: 700;
-    cursor: url('../../../assets/images/cursor-hand2.png'), auto;
+    
+
+    &.button_light {
+        cursor: url('../../../assets/images/cursor-hand2.png'), auto;
+    }
+
+    &.button_dark {
+        cursor: url('../../../assets/images/cursor-hand3.png'), auto;
+    }
 
     .dropdownMenu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-wrap: nowrap;
-    width: 100%;
-    top: 105%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #a29bfe;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+        top: 105%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border: 1px solid #a29bfe;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 10;
 
-    .dropdownItem {
-      font-size: 14px;
-      color: #6c5ce7;
-      cursor: pointer;
-      transition: background-color 0.2s;
+        .dropdownItem {
+            font-size: 14px;
+            color: #6c5ce7;
+            cursor: url('../../../assets/images/cursor-hand2.png'), auto;
+            transition: background-color 0.2s;
+            white-space: normal;
+                &:hover {
+                background-color: #f0f0ff;
+                }
 
-      &:hover {
-        background-color: #f0f0ff;
-      }
-
+        }
     }
-  }
+
 
 }
 
@@ -115,6 +124,7 @@
     gap: 27px;
     padding: 8px 10px;
     width: fit-content; 
+    white-space: nowrap;
 
     .spanIcon {
     display: inline-flex;

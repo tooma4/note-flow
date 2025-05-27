@@ -1,0 +1,62 @@
+@use '../../../scss/variables' as *;
+
+.input_container {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+
+.icon {
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    cursor: text;
+
+    &.icon_light * {
+        fill: $accent-color;
+    }
+
+    &.icon_dark * {
+        fill: $accent-color-3;
+    }
+}
+
+
+.input {
+    width: 100%;
+    padding: 11px 40px 11px 16px;
+    border-radius: 5px;
+    
+    &.input_search {
+        padding: 11px 40px 11px 16px;
+    }
+
+    &.input_modal {
+        padding: 11px 11px 11px 16px;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &.input_light {
+        border: 1px solid $accent-color;
+        background-color: $accent-color-3;
+        color: $accent-color;
+        
+        &::placeholder {
+            color: $input-font-color-light;
+        }
+    }
+    
+    &.input_dark {
+        border: 1px solid $accent-color-3;
+        background-color: $accent-color-4;
+        color: $accent-color-3;
+    
+        &::placeholder {
+            color: $input-font-color-dark;
+        }
+    }
+}

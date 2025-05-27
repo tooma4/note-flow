@@ -17,6 +17,8 @@ const config: Config = {
   moduleNameMapper: {
     // Добавить поддержку scss
     '\\.(scss|sass|css)$': 'identity-obj-proxy',
+    "\\.svg\\?react$": "<rootDir>/__mocks__/svgMock.tsx",
+    "\\.module\\.scss$": "identity-obj-proxy"
   },
 };
 

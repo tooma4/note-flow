@@ -14,13 +14,19 @@ export const ButtonUI = ({
   variant = "none",
   isOpen,
   options,
+  theme,
   handleSelect,
   onClick,
 }: IButtonProps) => {
   return (
     <>
       <button
-        className={clsx(styles.button, styles[color], styles[variant])}
+        className={clsx(
+          styles.button,
+          styles[color],
+          styles[variant],
+          styles[`button_${theme}`]
+        )}
         type={type}
         onClick={onClick}
       >

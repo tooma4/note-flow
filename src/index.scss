@@ -5,7 +5,6 @@
  	font-weight: 700;
   	background-color: $light-theme-color;
   	scroll-behavior: smooth;
-	color-scheme: light dark;
 	color: $primary-font-color;
 }
 
@@ -16,7 +15,6 @@
 
 a {
 	text-decoration: inherit;
-	cursor: pointer;
 }
 
 body {
@@ -28,6 +26,15 @@ body {
 	min-height: 100vh;
 }
 
+body.light {
+  background-color: $light-theme-color;
+}
+
+body.dark {
+  background-color: $dark-theme-color;
+}
+
 li {
 	list-style-type: none;
 }
+

@@ -12,10 +12,6 @@ export const Button = (props: IButtonProps) => {
   };
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const toggleTheme = () => {
-    console.log("Смена темы");
-  };
-
   const deleteTask = () => {
     console.log("Удаление");
   };
@@ -32,7 +28,6 @@ export const Button = (props: IButtonProps) => {
     text_and_icon: toggleDropdown,
     delete: deleteTask,
     edit: editTask,
-    theme: toggleTheme,
     add: addTask,
     none: () => {},
   };
