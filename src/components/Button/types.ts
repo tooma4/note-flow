@@ -1,4 +1,5 @@
 export interface IButtonProps {
+  theme?: "light" | "dark";
   type?: "button" | "submit";
   text?: string;
   textSelect?: "Все";
