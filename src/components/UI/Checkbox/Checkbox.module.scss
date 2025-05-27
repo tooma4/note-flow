@@ -1,0 +1,30 @@
+@use '../../../scss/variables' as *;
+
+.checkbox_container {
+    display: inline-flex;
+    width: 1.6em;
+    height: 1.6em;
+}
+
+
+.visually_hidden {
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+.checkbox {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $accent-color;
+}
+
+input[type="checkbox"]:checked + .checkbox {
+    background-image: url(../../../assets/images/arrow_checkboxsvg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: $accent-color;
+}
